@@ -1,0 +1,53 @@
+/* Global Styles */
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: Klarheit Kurrent, Arial, sans-serif;
+
+}
+
+/* Typography */
+h1{
+    font-family: Klarheit Kurrent, Arial, sans-serif;
+    font-size: 4rem;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    font-weight: bold;
+}
+h2{
+    font-size: 2rem;
+    margin-top: 24px;
+    margin-bottom: 24px;
+
+}
+h3{
+    font-size: 1.4rem;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+p{
+    font-family: Sohne Buch, Arial, sans-serif;
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin-top: 24px;
+    margin-bottom: 24px;
+
+}
+
+.link{
+    font-size: 1.4rem;
+    text-decoration: none;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+/* Section */
+.section{
+    position: relative;
+    padding-top: 75px;
+    padding-bottom: 75px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
