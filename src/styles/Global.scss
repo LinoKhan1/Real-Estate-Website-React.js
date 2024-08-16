@@ -1,11 +1,13 @@
 /* Global Styles */
+@import url(./font.css);
+
 
 body,
 html {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
-    font-family: Klarheit Kurrent, Arial, sans-serif;
+    font-family: Sohne Buch, Arial, sans-serif;
 
 }
 
@@ -18,12 +20,14 @@ h1{
     font-weight: bold;
 }
 h2{
+    font-family: Sohne Buch, Arial, sans-serif;
     font-size: 2rem;
     margin-top: 24px;
     margin-bottom: 24px;
 
 }
 h3{
+    font-family: Sohne Buch, Arial, sans-serif;
     font-size: 1.4rem;
     margin-top: 24px;
     margin-bottom: 24px;
@@ -38,10 +42,23 @@ p{
 }
 
 .link{
+    font-family: Sohne Buch, Arial, sans-serif;
     font-size: 1.4rem;
     text-decoration: none;
-    margin-top: 24px;
-    margin-bottom: 24px;
+    color: #000;
+   
+}
+ul{
+    text-decoration: none;
+    margin-left: 0;
+    padding: 0;
+
+}
+li{
+    font-family: Sohne Buch, Arial, sans-serif;
+    font-size: 1.4rem;
+    list-style: none;
+    text-decoration: none;
 }
 /* Section */
 .section{

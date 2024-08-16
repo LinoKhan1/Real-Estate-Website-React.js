@@ -1,9 +1,15 @@
+// React
 import React from "react";
 import { Link } from "react-router-dom";
-
+// Icons
+import { FaArrowRight } from 'react-icons/fa';
 
 // Styles & CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './Home.scss';
+
+// Images
+import Insight_img from '../../assets/images/rent-stabilization-img.webp';
 
 
 const Home = () => {
@@ -28,16 +34,16 @@ const Home = () => {
                         <div className="row">
                             <div className="col-lg-6">
                                 <div className="investment-section">
-                                    <h2>
+                                    <p>
                                         Since 2010
-                                    </h2>
+                                    </p>
                                     <div className="row">
                                         <div className="col">
                                             <h3 className="hero-number">142</h3>
                                             <h3>Loans</h3>
                                         </div>
                                         <div className="col">
-                                            <h3 className="hero-humber">$972M</h3>
+                                            <h3 className="hero-number">$972M</h3>
                                             <h3>Invested</h3>
                                         </div>
                                     </div>
@@ -50,25 +56,25 @@ const Home = () => {
                 <div className="insights-section">
                     <section className="section">
                         <div className="row">
-                            <div className="col">
+                            <div className="col-lg-6">
                                 <div className="title">
                                     <h1>Latest Insight</h1>
                                 </div>
 
                             </div>
-                            <div className="col">
+                            <div className="col-lg-6">
                                 <div className="insight-image">
-                                    <img src="" alt="" />
+                                    <img className="img-fluid" src={Insight_img} alt="Rent Stabilization Image" />
                                 </div>
                             </div>
                         </div>
                         <div className="row">
-                            <div className="col">
+                            <div className="col-lg-6 insight-preview">
                                 <h2>
                                     Rent Statbilization and Regional Banks
                                 </h2>
                                 <Link className="link" to="/news">
-                                    Read our Spring 2024 Report
+                                    Read our Spring 2024 Report <FaArrowRight />
                                 </Link>
                             </div>
                         </div>

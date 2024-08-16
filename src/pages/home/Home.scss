@@ -1,0 +1,61 @@
+// Home.scss
+
+/* Hero Section */
+.hero-section {
+
+    .investment-section {
+        position: relative;
+        padding-top: 150px;
+
+        .hero-number {
+            font-size: 4rem;
+            font-weight: bold;
+            border-bottom: 1px solid #000;
+
+        }
+
+        .row {
+            position: relative;
+            padding-top: 50px;
+        }
+
+        h3 {
+            font-size: bold;
+        }
+    }
+}
+
+/* Insights Section */
+.insights-section {
+    .title {
+        h1 {
+            font-size: 4rem;
+        }
+    }
+
+    .insight-preview {
+        position: relative;
+        padding: 50px;
+        background-color: #E8F1EF;
+        h2{
+            margin-bottom: 50px;
+            font-weight:600;
+
+        }
+
+        .link {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            font-weight:600;
+
+
+            svg {
+                margin-left: 15px;
+                font-size: 30px;
+            }
+        }
+
+    }
+
+}
