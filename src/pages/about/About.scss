@@ -1,18 +1,164 @@
 // About.scss
 
 // Hero Section
-.hero-section{
+.hero-section {
 
-    h1{
+    background-color: #172121;
+    color: #fff;
+    border-bottom: 1px solid #fff;;
+    h1 {
         font-weight: 300;
     }
-    .hero-text{
+    .text{
+        background-color: #0D0D0D;
+        color: #fff;
+    }
+
+    .hero-text {
         position: relative;
         padding-top: 200px;
     }
 
-    .square{
-        background-color: antiquewhite;
+    .square {
+        background-color: #172121;
+    }
+}
 
+// Our team
+/*.team-section {
+
+    background-color: #0D0D0D;
+    color: #fff;
+
+    h1 {
+        margin-bottom: 75px;
+    }
+}*/
+.team-section {
+    background-color: #172121;
+    color: #fff;
+
+    .section {
+
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+
+}
+
+.image-row {
+    position: relative;
+}
+
+.larger-image {
+    position: relative;
+}
+
+.smaller-image {
+    position: absolute;
+    width: 33%;
+    /* Approximately one-third of the size */
+    bottom: 0;
+    right: 0;
+    transform: translate(-30%, 30%);
+    /* Adjust the position to overlap */
+}
+
+.img-fluid {
+    width: 100%;
+    height: auto;
+}
+
+// Investors
+.investor-section {
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+
+    h1 {
+        margin-bottom: 75px;
+    }
+
+    p {
+        width: 70%;
+    }
+
+}
+
+// Leadership
+.leadership-section {
+    background-color: #172121;
+    color: #fff;
+
+    h1 {
+        padding-bottom: 75px;
+    }
+
+    .row {
+        position: relative;
+        padding-left: 250px;
+
+        .col {
+            padding: 50px;
+
+            img {
+                margin-bottom: 24px;
+            }
+        }
+    }
+}
+
+// News
+.news-section {
+
+    .title-section {
+        position: relative;
+        padding-left: 200px;
+
+        h1 {
+            padding-bottom: 75px;
+        }
+
+
+    }
+
+    .article {
+        border-bottom: 1px solid #0D0D0D;
+
+
+        .news-preview {
+            display: flex;
+            justify-content: center;
+            /* Optional: Centers horizontally if needed */
+            align-items: center;
+            /* Vertically centers the content */
+            flex-direction: column;
+
+            h3 {
+                font-size: 1.2rem;
+            }
+
+        }
+    }
+
+}
+
+// Contact
+.contact-section {
+    position: relative;
+    padding-left: 150px;
+
+    .title {
+        h1 {
+            width: 70%;
+            margin-bottom: 100px;
+        }
+
+    }
+
+    p {
+        width: 60%;
     }
 }

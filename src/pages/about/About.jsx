@@ -10,11 +10,17 @@ import './About.scss';
 import Hero_img from '../../assets/images/hero2.png';
 import Team_img1 from '../../assets/images/team1.png';
 import Team_img2 from '../../assets/images/team2.png';
-import Leader_img1 from '../../assets/images/leader1.png';
-import Leader_img2 from '../../assets/images/leader2.png';
-import Leader_img3 from '../../assets/images/leader3.png';
+import Leader_img1 from '../../assets/images/Martin_profile.png';
+import Leader_img2 from '../../assets/images/John_profile.png';
+import Leader_img3 from '../../assets/images/Peter_profile.png';
 import Leader_img4 from '../../assets/images/leader4.png';
+import JP_img from '../../assets/images/JP-Morgan-Chase-Logo.png';
+import Investor_img from '../../assets/images/investor.png';
 
+import WSJ_logo from '../../assets/images/wsj-logo.png';
+import FT_logo from '../../assets/images/Financial_times_logo.png';
+import BBC_logo from '../../assets/images/BBC-logo.png';
+import Bloomberg_logo from '../../assets/images/Bloomberg_logo.png';
 const About = () => {
 
     // About Page
@@ -25,7 +31,7 @@ const About = () => {
                 <div className="hero-section">
 
                     <div className="row">
-                        <div className="col-lg-5">
+                        <div className="col-lg-5 text">
                             <h1 className="display-3">We build accessible and reliable cloud infrastructure.</h1>
                             <div className="hero-text">
                                 <p>Render helps software teams ship products fast and at any scale. We host everything from hundred-line prototypes to applications with hundreds of services, all with a relentless commitment to reliability and uptime.</p>
@@ -42,40 +48,42 @@ const About = () => {
                 <div className="team-section">
                     <section className="section">
                         <div className="row">
-                            <div className="col">
-                                <h1 className="display-1">Our Team</h1>
+                            <div className="col-lg-4">
+                                <h1 className="display-2">Our Team</h1>
                                 <p>
                                     Render is headquartered in San Francisco, California, with remote team members distributed across the globe. We’re always on the lookout to add kind, thoughtful, and exceptionally talented individuals to our team. Drop us a line if you're motivated by the intersection of individual developer experience and global scale.
                                 </p>
-                                <button>Explore</button>
+                                <button className="primary-btn">Explore our team</button>
                             </div>
-                            <div className="col">
-                                <div className="row">
-                                    <div className="col">
-                                        <img className="img-fluid" src={Team_img1} alt="" />
+                            <div className="col-lg-8">
+                                <div className="row image-row">
+                                    <div className="col larger-image">
+                                        <img className="img-fluid" src={Team_img2} alt="Team Image 2" />
                                     </div>
-                                    <div className="col">
-                                        <img className="img-fluid" src={Team_img2} alt="" />
+                                    <div className="col smaller-image">
+                                        <img className="img-fluid" src={Team_img1} alt="Team Image 1" />
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </section>
                 </div>
+
                 {/** Investor Section */}
                 <div className="investor-section">
                     <section className="section">
                         <div className="row">
                             <div className="col">
-                                <h1 className="display-1">Our Backers</h1>
-                                <p>
-                                    We have raised over $75M from world-class investors. Their support of Render's mission helps us to support yours.
-                                </p>
-                            </div>
-                            <div className="col">
-                                <div className="investors">
-                                    <h1>Investors</h1>
+                                <div className="investor-text">
+                                    <h1 className="display-2">Our Backers</h1>
+                                    <p>
+                                        We have raised over $75M from world-class investors. Their support of Render's mission helps us to support yours.
+                                    </p>
                                 </div>
+                            </div>
+                            <div className="col investors">
+                                <img className="img-fluid" src={Investor_img} alt="" />
+
                             </div>
                         </div>
                     </section>
@@ -84,7 +92,7 @@ const About = () => {
                 <div className="leadership-section">
                     <section className="section">
                         <div className="title">
-                            <h1 className="display-1">Our Leadership</h1>
+                            <h1 className="display-2">Our Leadership</h1>
                         </div>
                         <div className="row">
                             <div className="col">
@@ -105,7 +113,17 @@ const About = () => {
                         </div>
                         <div className="row">
                             <div className="col">
-                                <img className="img-fluid" src={Leader_img4} alt="Profile picture" />
+                                <img className="img-fluid" src={Leader_img1} alt="Profile picture" />
+                                <h2>John Doe</h2>
+                                <h3>Job Title</h3>
+                            </div>
+                            <div className="col">
+                                <img className="img-fluid" src={Leader_img2} alt="Profile picture" />
+                                <h2>John Doe</h2>
+                                <h3>Job Title</h3>
+                            </div>
+                            <div className="col">
+                                <img className="img-fluid" src={Leader_img3} alt="Profile picture" />
                                 <h2>John Doe</h2>
                                 <h3>Job Title</h3>
                             </div>
@@ -116,56 +134,89 @@ const About = () => {
                 {/** News Section */}
                 <div className="news-section">
                     <section className="section">
-                        <div className="title">
-                            <h1 className="display-1">News & Coverage</h1>
+                        <div className="title-section">
+                            <h1 className="display-2">News & Coverage</h1>
 
                         </div>
                         <div className="row">
-                            <div className="col">
-                                <div className="title">
-                                    <h1 className="display-2">Bloomberg</h1>
-                                </div>
+                            <div className="col-lg-2">
+
                             </div>
                             <div className="col">
-                                <h3>Date released</h3>
-                                <h2>Artile title</h2>
-                                <h3>Article Author</h3>
+                                <div className="row article">
+                                    <div className="col">
+                                        <div className="title-img">
+                                            <img className="img-fluid" src={FT_logo} alt="" />
+                                        </div>
+                                    </div>
+                                    <div className="col news-preview">
+                                        <h3>Date released</h3>
+                                        <h2>Maverick Nabs $247M in Signature CRE Loans – Blackstone, Rialto Entity Sell Debt Backed by Office, Multifamily, Retail</h2>
+                                        <h3>Article Author</h3>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div className="row">
+                            <div className="col-lg-2">
+
+                            </div>
+                            <div className="col">
+                                <div className="row article">
+                                    <div className="col">
+                                        <div className="title-img">
+                                            <img className="img-fluid" src={WSJ_logo} alt="" />
+                                        </div>
+                                    </div>
+                                    <div className="col news-preview">
+                                        <h3>Date released</h3>
+                                        <h2>Maverick Nabs $247M in Signature CRE Loans – Blackstone, Rialto Entity Sell Debt Backed by Office, Multifamily, Retail</h2>
+                                        <h3>Article Author</h3>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                         <div className="row">
-                            <div className="col">
-                                <div className="title">
-                                    <h1 className="display-2">Financial Times</h1>
-                                </div>
+                            <div className="col-lg-2">
+
                             </div>
                             <div className="col">
-                                <h3>Date released</h3>
-                                <h2>Artile title</h2>
-                                <h3>Article Author</h3>
+                                <div className="row article">
+                                    <div className="col">
+                                        <div className="title-img">
+                                            <img className="img-fluid" src={Bloomberg_logo} alt="" />
+                                        </div>
+                                    </div>
+                                    <div className="col news-preview">
+                                        <h3>Date released</h3>
+                                        <h2>Maverick Nabs $247M in Signature CRE Loans – Blackstone, Rialto Entity Sell Debt Backed by Office, Multifamily, Retail</h2>
+                                        <h3>Article Author</h3>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                         <div className="row">
+                            <div className="col-lg-2">
+
+                            </div>
                             <div className="col">
-                                <div className="title">
-                                    <h1 className="display-2">WSJ</h1>
+                                <div className="row article">
+                                    <div className="col">
+                                        <div className="title-img">
+                                            <img className="img-fluid" src={BBC_logo} alt="" />
+                                        </div>
+                                    </div>
+                                    <div className="col news-preview">
+                                        <h3>Date released</h3>
+                                        <h2>Maverick Nabs $247M in Signature CRE Loans – Blackstone, Rialto Entity Sell Debt Backed by Office, Multifamily, Retail</h2>
+                                        <h3>Article Author</h3>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="col">
-                                <h3>Date released</h3>
-                                <h2>Artile title</h2>
-                                <h3>Article Author</h3>
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div className="col">
-                                <div className="title">
-                                    <h1 className="display-2">BBC</h1>
-                                </div>
-                            </div>
-                            <div className="col">
-                                <h3>Date released</h3>
-                                <h2>Artile title</h2>
-                                <h3>Article Author</h3>
+
                             </div>
                         </div>
                     </section>
@@ -173,9 +224,15 @@ const About = () => {
                 {/** Contact Section */}
                 <div className="contact-section">
                     <section className="section">
-                        <div className="title">
-                            <h1 className="display-1">Start building with Render</h1>
+                        <div className="row">
+                            <div className="col-lg-6">
+                                <div className="title">
+                                    <h1 className="display-2">Start building with Render</h1>
+                                </div>
+
+                            </div>
                         </div>
+
                         <div className="row">
                             <div className="col">
                                 <p>
@@ -183,7 +240,7 @@ const About = () => {
                                 </p>
                             </div>
                             <div className="col">
-                                <button>Get Started</button>
+                                <button className="primary-btn">Get Started</button>
                             </div>
                         </div>
                     </section>

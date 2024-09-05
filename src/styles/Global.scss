@@ -8,7 +8,6 @@ html {
     padding: 0;
     scroll-behavior: smooth;
     font-family: Sohne Buch, Arial, sans-serif;
-
 }
 
 /* Typography */
@@ -28,7 +27,7 @@ h2{
 }
 h3{
     font-family: Sohne Buch, Arial, sans-serif;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     margin-top: 24px;
     margin-bottom: 24px;
 }
@@ -63,8 +62,26 @@ li{
 /* Section */
 .section{
     position: relative;
-    padding-top: 75px;
-    padding-bottom: 75px;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+/* Buttons */
+.primary-btn{
+    background-color: #5cff9c;
+    color: #172121;
+    padding: 18px 60px; 
+    border: none;
+    font-size: 1.6rem;
+    
+}
+.secondary-btn{
+    background-color: #fff;
+    color: #172121;
+    padding: 18px 60px; 
+    border: none;
+    font-size: 1.6rem;
+
 }
