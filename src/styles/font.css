@@ -3,6 +3,8 @@
 @font-face {
     font-family: 'ES-Klarheit';
     src: url('../assets/fonts/es-klarheit-font-family/ESKlarheitGrotesk-Bd-TRIAL-BF6618a70049644.otf');
+    font-weight: bold;
+    font-style: normal;
 }
 @font-face {
     font-family: 'ES-Klarheit';

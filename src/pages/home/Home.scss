@@ -2,25 +2,47 @@
 
 /* Hero Section */
 .hero-section {
-   
-    .investment-section {
+    background-color: #172121;
+    color: #fff;
+    position: relative;
+    overflow: hidden; /* Ensure map stays within section bounds */
+
+    .map-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1; /* Send map behind content */
+        filter: brightness(50%); /* Dim the map to blend with background */
+    }
+
+    .section {
         position: relative;
-        padding-top: 150px;
+        z-index: 1; /* Ensure content is above the map */
 
-        .hero-number {
-            font-size: 4rem;
-            font-weight: bold;
-            border-bottom: 1px solid #fff;
-
-        }
-
-        .row {
+        .investment-section {
             position: relative;
-            padding-top: 50px;
-        }
+            padding-top: 150px;
 
-        h3 {
-            font-size: bold;
+            .hero-number {
+                font-size: 4rem;
+                font-weight: bold;
+                border-bottom: 1px solid #fff;
+                margin: 0;
+                padding: 0;
+            }
+
+            .row {
+                position: relative;
+                padding-top: 50px;
+            }
+
+            h3 {
+                font-size: 1.5rem;
+                font-weight: bold;
+                margin: 0;
+            }
         }
     }
 }

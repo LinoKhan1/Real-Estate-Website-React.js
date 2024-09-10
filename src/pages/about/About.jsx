@@ -36,6 +36,7 @@ const About = () => {
                             <div className="hero-text">
                                 <p>Render helps software teams ship products fast and at any scale. We host everything from hundred-line prototypes to applications with hundreds of services, all with a relentless commitment to reliability and uptime.</p>
                             </div>
+                            <button className="primary-btn">Contact us</button>
                         </div>
                         <div className="col square">
                         </div>
@@ -48,14 +49,14 @@ const About = () => {
                 <div className="team-section">
                     <section className="section">
                         <div className="row">
-                            <div className="col-lg-4">
+                            <div className="col-lg-5">
                                 <h1 className="display-2">Our Team</h1>
                                 <p>
                                     Render is headquartered in San Francisco, California, with remote team members distributed across the globe. We’re always on the lookout to add kind, thoughtful, and exceptionally talented individuals to our team. Drop us a line if you're motivated by the intersection of individual developer experience and global scale.
                                 </p>
                                 <button className="primary-btn">Explore our team</button>
                             </div>
-                            <div className="col-lg-8">
+                            <div className="col-lg-6">
                                 <div className="row image-row">
                                     <div className="col larger-image">
                                         <img className="img-fluid" src={Team_img2} alt="Team Image 2" />
@@ -70,16 +71,14 @@ const About = () => {
                 </div>
 
                 {/** Investor Section */}
-                <div className="investor-section">
+                {/*<div className="investor-section">
                     <section className="section">
                         <div className="row">
-                            <div className="col">
-                                <div className="investor-text">
-                                    <h1 className="display-2">Our Backers</h1>
-                                    <p>
-                                        We have raised over $75M from world-class investors. Their support of Render's mission helps us to support yours.
-                                    </p>
-                                </div>
+                            <div className="col investor-text">
+                                <h1 className="display-2">Our Backers</h1>
+                                <p>
+                                    We have raised over $75M from world-class investors. Their support of Render's mission helps us to support yours.
+                                </p>
                             </div>
                             <div className="col investors">
                                 <img className="img-fluid" src={Investor_img} alt="" />
@@ -87,7 +86,7 @@ const About = () => {
                             </div>
                         </div>
                     </section>
-                </div>
+                </div>*/}
                 {/** Leadership Section */}
                 <div className="leadership-section">
                     <section className="section">
@@ -151,7 +150,7 @@ const About = () => {
                                     </div>
                                     <div className="col news-preview">
                                         <h3>Date released</h3>
-                                        <h2>Maverick Nabs $247M in Signature CRE Loans – Blackstone, Rialto Entity Sell Debt Backed by Office, Multifamily, Retail</h2>
+                                        <p>Maverick Nabs $247M in Signature CRE Loans – Blackstone, Rialto Entity Sell Debt Backed by Office, Multifamily, Retail</p>
                                         <h3>Article Author</h3>
                                     </div>
                                 </div>
@@ -172,7 +171,7 @@ const About = () => {
                                     </div>
                                     <div className="col news-preview">
                                         <h3>Date released</h3>
-                                        <h2>Maverick Nabs $247M in Signature CRE Loans – Blackstone, Rialto Entity Sell Debt Backed by Office, Multifamily, Retail</h2>
+                                        <p>Maverick Nabs $247M in Signature CRE Loans – Blackstone, Rialto Entity Sell Debt Backed by Office, Multifamily, Retail</p>
                                         <h3>Article Author</h3>
                                     </div>
                                 </div>
@@ -192,7 +191,7 @@ const About = () => {
                                     </div>
                                     <div className="col news-preview">
                                         <h3>Date released</h3>
-                                        <h2>Maverick Nabs $247M in Signature CRE Loans – Blackstone, Rialto Entity Sell Debt Backed by Office, Multifamily, Retail</h2>
+                                        <p>Maverick Nabs $247M in Signature CRE Loans – Blackstone, Rialto Entity Sell Debt Backed by Office, Multifamily, Retail</p>
                                         <h3>Article Author</h3>
                                     </div>
                                 </div>
@@ -212,7 +211,7 @@ const About = () => {
                                     </div>
                                     <div className="col news-preview">
                                         <h3>Date released</h3>
-                                        <h2>Maverick Nabs $247M in Signature CRE Loans – Blackstone, Rialto Entity Sell Debt Backed by Office, Multifamily, Retail</h2>
+                                        <p>Maverick Nabs $247M in Signature CRE Loans – Blackstone, Rialto Entity Sell Debt Backed by Office, Multifamily, Retail</p>
                                         <h3>Article Author</h3>
                                     </div>
                                 </div>
@@ -222,7 +221,7 @@ const About = () => {
                     </section>
                 </div>
                 {/** Contact Section */}
-                <div className="contact-section">
+                <div className="in-touch-section">
                     <section className="section">
                         <div className="row">
                             <div className="col-lg-6">
@@ -240,7 +239,7 @@ const About = () => {
                                 </p>
                             </div>
                             <div className="col">
-                                <button className="primary-btn">Get Started</button>
+                                <button className="secondary-btn">Get Started</button>
                             </div>
                         </div>
                     </section>

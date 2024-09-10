@@ -1,31 +1,23 @@
 import React from "react";
-
 import './layout.scss';
 
 const Footer = () => {
-    /* Footer Component */
     return (
-        <div className="footer-component" >
+        <div className="footer-component">
             {/** Footer Section */}
             <div className="footer-section">
                 <div className="row">
                     <div className="col-lg-3">
                         <div className="logo">
-                            <h1>
-                                Company Name
-                            </h1>
+                            <h2>Company Logo</h2>
                         </div>
-
                     </div>
                     <div className="col-lg-3">
-                        <h2>
-                            Company
-                        </h2>
+                        <h2>Company</h2>
                         <ul>
                             <li>About</li>
                             <li>News</li>
                         </ul>
-
                     </div>
                     <div className="col-lg-3">
                         <h2>Get in touch</h2>
@@ -33,19 +25,26 @@ const Footer = () => {
                             <li>Contact us</li>
                             <li>LinkedIn</li>
                         </ul>
-
                     </div>
                 </div>
-
+                {/** Top Arrow */}
+                <a href="#top" className="top-arrow">↑</a>
             </div>
+
             {/** Copyright Section */}
             <div className="copyright-section">
-
+                <div className="copyright-links">
+                    <ul>
+                        <li>Terms and Conditions</li>
+                        <li>Privacy Policy</li>
+                    </ul>
+                </div>
+                <div className="copyright-info">
+                    <span>© 2024</span>
+                </div>
             </div>
-
-
         </div>
     );
-
 }
-export default Footer
+
+export default Footer;

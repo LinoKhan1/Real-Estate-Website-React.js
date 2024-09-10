@@ -1,28 +1,44 @@
 // About.scss
 
 // Hero Section
-.hero-section {
+.about-page {
+    .hero-section {
+        background-image: url('../../assets/images/grid-pattern.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        /* 5% opacity */
+        margin-top: 0;
 
-    background-color: #172121;
-    color: #fff;
-    border-bottom: 1px solid #fff;;
-    h1 {
-        font-weight: 300;
-    }
-    .text{
-        background-color: #0D0D0D;
+
+
         color: #fff;
+
+        h1 {
+            font-weight: 300;
+            padding-top: 50px;
+
+        }
+
+        .text {
+            background-color: #0D0D0D;
+            color: #fff;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .hero-text {
+            position: relative;
+            padding-top: 300px;
+        }
+
+
+
     }
 
-    .hero-text {
-        position: relative;
-        padding-top: 200px;
-    }
-
-    .square {
-        background-color: #172121;
-    }
 }
+
 
 // Our team
 /*.team-section {
@@ -38,21 +54,30 @@
     background-color: #172121;
     color: #fff;
 
-    .section {
+    .col-lg-5 {
+        h1 {
+            padding-bottom: 75px;
+        }
 
-        max-width: 1200px;
-        margin: 0 auto;
+        p {
+            width: 80%;
+        }
+
     }
+
+
 
 
 }
 
 .image-row {
     position: relative;
+    padding-left: 150px;
 }
 
 .larger-image {
     position: relative;
+
 }
 
 .smaller-image {
@@ -73,16 +98,28 @@
 // Investors
 .investor-section {
     position: relative;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    background-image: url('../../assets/images/grid-patter-black.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
+
+    color: #fff;
+
+    .investors {
+
+        img {
+            width: 70%;
+        }
+
+    }
 
     h1 {
         margin-bottom: 75px;
     }
 
     p {
-        width: 70%;
+        width: 80%;
     }
 
 }
@@ -90,7 +127,7 @@
 // Leadership
 .leadership-section {
     background-color: #172121;
-    color: #fff;
+    color:#fff;
 
     h1 {
         padding-bottom: 75px;
@@ -127,17 +164,19 @@
     .article {
         border-bottom: 1px solid #0D0D0D;
 
+        img{
+            width: 60%;
+        }
 
         .news-preview {
             display: flex;
             justify-content: center;
             /* Optional: Centers horizontally if needed */
-            align-items: center;
             /* Vertically centers the content */
             flex-direction: column;
 
             h3 {
-                font-size: 1.2rem;
+                font-size: 1rem;
             }
 
         }
@@ -146,9 +185,9 @@
 }
 
 // Contact
-.contact-section {
+.in-touch-section {
     position: relative;
-    padding-left: 150px;
+    background-color: #5cff9c;
 
     .title {
         h1 {
@@ -161,4 +200,5 @@
     p {
         width: 60%;
     }
+   
 }
