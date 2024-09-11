@@ -10,15 +10,11 @@
         border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         /* 5% opacity */
         margin-top: 0;
-
-
-
         color: #fff;
 
         h1 {
             font-weight: 300;
             padding-top: 50px;
-
         }
 
         .text {
@@ -30,11 +26,12 @@
 
         .hero-text {
             position: relative;
-            padding-top: 300px;
+            padding-top: 220px;
         }
 
-
-
+        button {
+            margin-bottom: 24px;
+        }
     }
 
 }
@@ -61,6 +58,10 @@
 
         p {
             width: 80%;
+        }
+
+        button {
+            margin-bottom: 24px;
         }
 
     }
@@ -111,7 +112,6 @@
         img {
             width: 70%;
         }
-
     }
 
     h1 {
@@ -127,7 +127,7 @@
 // Leadership
 .leadership-section {
     background-color: #172121;
-    color:#fff;
+    color: #fff;
 
     h1 {
         padding-bottom: 75px;
@@ -136,9 +136,12 @@
     .row {
         position: relative;
         padding-left: 250px;
+        display: flex;
+        flex-wrap: wrap;
 
         .col {
             padding: 50px;
+            flex: 1;
 
             img {
                 margin-bottom: 24px;
@@ -149,6 +152,10 @@
 
 // News
 .news-section {
+    .section {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
 
     .title-section {
         position: relative;
@@ -158,13 +165,25 @@
             padding-bottom: 75px;
         }
 
+        border-bottom: 1px solid #0D0D0D;
+
 
     }
 
     .article {
+        border-top: 1px solid #0D0D0D;
+        border-left: 1px solid #0D0D0D;
         border-bottom: 1px solid #0D0D0D;
 
-        img{
+        display: flex;
+        flex-wrap: wrap;
+
+        .col {
+            flex: 1;
+            margin: 10px;
+        }
+
+        img {
             width: 60%;
         }
 
@@ -200,5 +219,219 @@
     p {
         width: 60%;
     }
-   
+
+}
+
+/* Media queries */
+
+@media only screen and (max-width: 1400px) {
+    .about-page {
+
+        /* Hero Section */
+        .hero-section {
+
+            .hero-text {
+                padding-top: 150px;
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 1200px) {
+    .about-page {
+
+        /* Hero Section */
+        .hero-section {
+
+            .row {
+                .col-lg-5 {
+                    width: 100%;
+
+                    h1 {
+                        width: 60%;
+                    }
+                }
+            }
+
+            .hero-text {
+                padding-top: 24px;
+
+                p {
+                    width: 50%;
+                }
+            }
+        }
+
+        .team-section {
+            h1 {
+                padding-bottom: 24px;
+            }
+
+            p {
+                width: 100%;
+            }
+        }
+
+        .image-row {
+            position: relative;
+            padding: 0px;
+        }
+
+        /* Leadership section */
+        .leadership-section {
+            .row {
+                position: relative;
+                padding-left: 0px;
+
+                .col {
+                    padding: 50px;
+
+                    img {
+                        margin-bottom: 24px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 992px) {
+
+    .about-page {
+
+        /* Hero Section */
+        .hero-section {
+
+            .row {
+                .col-lg-5 {
+                    width: 100%;
+
+                    h1 {
+                        width: 70%;
+                    }
+                }
+            }
+
+            .hero-text {
+                padding-top: 24px;
+
+                p {
+                    width: 70%;
+                }
+            }
+        }
+
+        /* Team Section */
+        .team-section {
+
+
+            .col-lg-5 {
+
+                p {
+                    width: 100%;
+                }
+
+            }
+
+        }
+
+        .image-row {
+            position: relative;
+            padding: 0px;
+        }
+
+        /* News Section */
+        .news-section {
+
+
+            .title-section {
+                padding-left: 0px;
+            }
+        }
+
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    .about-page {
+
+        /* Hero Section */
+        .hero-section {
+            padding-left: 25px;
+            padding-right: 25px;
+
+            .row {
+                .col-lg-5 {
+                    width: 100%;
+
+                    h1 {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .hero-text {
+                padding-top: 24px;
+
+                p {
+                    width: 100%;
+                }
+            }
+        }
+
+        /* News Section */
+        .news-section {
+
+            .title-section {
+                padding-left: 0px;
+            }
+
+            .article {
+
+                .col {
+                    flex: 100%;
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+
+    .leadership-section {
+        .row {
+            .col {
+                flex: 100%;
+                max-width: 80%;
+                margin: auto;
+                padding: 0px;
+
+                img {
+                    margin-bottom: 0px;
+                }
+
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+
+    .leadership-section {
+        .row {
+            .col {
+                flex: 100%;
+                max-width: 100%;
+                margin: auto;
+                padding: 0px;
+
+                img {
+                    margin-bottom: 0px;
+                }
+
+            }
+        }
+    }
 }

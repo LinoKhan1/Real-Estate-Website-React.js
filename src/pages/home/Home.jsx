@@ -99,7 +99,7 @@ const Home = () => {
                         <div className="row">
                             <div className="col-lg-6">
                                 <div className="title">
-                                    <h1>Latest Insight</h1>
+                                    <h1 className="display-1">Latest Insight</h1>
                                 </div>
                             </div>
                             <div className="col-lg-6">

@@ -5,7 +5,8 @@
     background-color: #172121;
     color: #fff;
     position: relative;
-    overflow: hidden; /* Ensure map stays within section bounds */
+    overflow: hidden;
+    /* Ensure map stays within section bounds */
 
     .map-background {
         position: absolute;
@@ -13,13 +14,16 @@
         left: 0;
         width: 100%;
         height: 100%;
-        z-index: -1; /* Send map behind content */
-        filter: brightness(50%); /* Dim the map to blend with background */
+        z-index: -1;
+        /* Send map behind content */
+        filter: brightness(50%);
+        /* Dim the map to blend with background */
     }
 
     .section {
         position: relative;
-        z-index: 1; /* Ensure content is above the map */
+        z-index: 1;
+        /* Ensure content is above the map */
 
         .investment-section {
             position: relative;
@@ -34,8 +38,14 @@
             }
 
             .row {
-                position: relative;
                 padding-top: 50px;
+                display: flex;
+                flex-wrap: wrap;
+
+                .col {
+                    flex: 1;
+                }
+
             }
 
             h3 {
@@ -49,19 +59,16 @@
 
 /* Insights Section */
 .insights-section {
-    .title {
-        h1 {
-            font-size: 4rem;
-        }
-    }
+
 
     .insight-preview {
         position: relative;
         padding: 50px;
         background-color: #E8F1EF;
-        h2{
+
+        h2 {
             margin-bottom: 50px;
-            font-weight:600;
+            font-weight: 600;
 
         }
 
@@ -69,7 +76,7 @@
             position: relative;
             display: inline-flex;
             align-items: center;
-            font-weight:600;
+            font-weight: 600;
 
 
             svg {
@@ -79,5 +86,26 @@
         }
 
     }
+
+}
+
+/* Media queries */
+@media only screen and (max-width:768px) {
+
+    .hero-section {
+        .section {
+            .investment-section {
+                .row {
+                    .col {
+                        flex: 100%;
+                        max-width: 100%;
+                        margin-bottom: 24px;
+                    }
+                }
+            }
+        }
+
+    }
+
 
 }

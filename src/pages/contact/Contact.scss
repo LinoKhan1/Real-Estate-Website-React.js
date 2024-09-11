@@ -5,33 +5,58 @@
         padding-bottom: 100px;
         text-align: center;
     }
-}
 
-.contact-page {
     .contact-section {
         background-color: #fff;
-        position: relative;
         padding-left: 50px;
         padding-right: 50px;
 
+        .contact-info {
+            .contact-item {
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
 
-        .col-lg-9 {
-            .row {
-                border-top: 1px solid #0D0D0D;
-                position: relative;
-                padding-top: 24px;
-                padding-bottom: 24px;
-                
-                
+                .icon-circle {
+                    background-color: #5cff9c;
+                    border-radius: 50%;
+                    padding: 10px;
+                    margin-right: 15px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #172121;
+                    font-size: 1.5rem;
+                    width: 40px;
+                    height: 40px;
+                }
+
+                p {
+                    font-size: 1.2rem;
+                    font-weight: 300;
+                    margin: 0;
+                }
             }
         }
-    }
 
+    }
 }
 
 form {
+
     background-color: #f6f7fa;
     padding: 50px;
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+
+        .col {
+            flex: 1;
+            margin: 10px;
+        }
+
+    }
 
     label {
         font-size: 1.4rem;
@@ -83,7 +108,6 @@ form {
 
     textarea {
         background-color: #f6f7fa;
-
         font-size: 1.2rem;
         font-weight: 300;
         padding-bottom: 24px;
@@ -91,4 +115,36 @@ form {
         border-bottom: 1px solid grey;
 
     }
+}
+
+/* Media queries */
+
+/* Medum devices (landscape tablets) */
+@media only screen and (max-width: 768px) {
+
+    /* Contact Section */
+    .contact-page {
+        .contact-section {
+            position: relative;
+            padding: 0px;
+        }
+
+        form {
+            padding: 25px;
+
+            .row {
+                .col {
+                    flex: 100%;
+                    max-width: 100%;
+                }
+            }
+
+            input[type=text],
+            input[type=email],
+            textarea {
+                margin-top: 16px;
+            }
+        }
+    }
+
 }

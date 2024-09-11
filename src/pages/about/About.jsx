@@ -139,7 +139,6 @@ const About = () => {
                         </div>
                         <div className="row">
                             <div className="col-lg-2">
-
                             </div>
                             <div className="col">
                                 <div className="row article">
