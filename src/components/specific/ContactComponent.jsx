@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 import './Component.scss';
 
 
@@ -26,7 +26,11 @@ const ContactComponent = () => {
                             </p>
                         </div>
                         <div className="col">
-                            <button className="secondary-btn">Get Started</button>
+                            <button className="secondary-btn">
+                                <Link className="link" to="/contact">
+                                    Get Started
+                                </Link>
+                            </button>
                         </div>
                     </div>
                 </section>

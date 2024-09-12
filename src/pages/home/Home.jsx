@@ -115,7 +115,7 @@ const Home = () => {
                                 <h2>
                                     Rent Stabilization and Regional Banks
                                 </h2>
-                                <Link className="link" to="/news">
+                                <Link className="link" to="/">
                                     Read our Spring 2024 Report <FaArrowRight />
                                 </Link>
                             </div>

@@ -4,7 +4,8 @@
 .navbar {
     background-color: #172121;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    padding: 25px 50px; /* Adjust padding to match container's width */
+    padding: 25px 50px;
+    /* Adjust padding to match container's width */
     position: relative;
 
     .navbar-brand {
@@ -16,8 +17,10 @@
     .navbar-toggler {
         border: none;
         background-color: transparent;
+
         .navbar-toggler-icon {
-            background-image: url('data:image/svg+xml;base64,...'); /* Update with your own SVG if necessary */
+            background-image: url('data:image/svg+xml;base64,...');
+            /* Update with your own SVG if necessary */
         }
     }
 
@@ -27,10 +30,17 @@
                 .nav-link {
                     color: #fff;
                     margin-left: 24px;
-                    font-size: 1.4rem;
+                    font-size: 1.2rem;
+
                     &.active {
                         font-weight: bold;
                     }
+
+                    text-decoration: none;
+                }
+
+                button {
+                    font-size: 1.2rem;
                 }
 
                 .primary-btn {
@@ -74,23 +84,32 @@
     /* Top Arrow styling - positioned directly above the copyright section */
     .top-arrow {
         position: absolute;
-        right: 50px; /* Align with the copyright section */
-        bottom: 0; /* No bottom padding/margin, sits directly above the copyright */
-        background-color: #5cff9c; /* Same background color as the copyright span */
-        color: #172121; /* Matches the copyright text color */
-        width: 100px; /* Same width as the copyright span */
-        height: 60px; /* Same height as the copyright section */
+        right: 50px;
+        /* Align with the copyright section */
+        bottom: 0;
+        /* No bottom padding/margin, sits directly above the copyright */
+        background-color: #5cff9c;
+        /* Same background color as the copyright span */
+        color: #172121;
+        /* Matches the copyright text color */
+        width: 100px;
+        /* Same width as the copyright span */
+        height: 60px;
+        /* Same height as the copyright section */
         display: flex;
         justify-content: center;
         align-items: center;
         text-decoration: none;
         font-size: 20px;
-        padding: 0 20px; /* Same padding as the copyright span */
-        border-radius: 0; /* No border radius */
+        padding: 0 20px;
+        /* Same padding as the copyright span */
+        border-radius: 0;
+        /* No border radius */
         transition: background-color 0.3s ease;
 
         &:hover {
-            background-color: #45d87b; /* Hover effect */
+            background-color: #45d87b;
+            /* Hover effect */
         }
     }
 }
@@ -103,14 +122,15 @@
     align-items: center;
     padding-left: 150px;
     padding-right: 50px;
-    height: 60px; /* Fixed height for consistency */
+    height: 60px;
+    /* Fixed height for consistency */
 
     .copyright-links ul {
         display: flex;
         list-style: none;
         margin: 0;
         padding: 0;
-        
+
         li {
             margin-right: 20px;
             text-decoration: underline;
@@ -121,17 +141,58 @@
     .copyright-info {
         display: flex;
         align-items: center;
-        height: 100%;  /* Ensures it fills the height */
-        
+        height: 100%;
+        /* Ensures it fills the height */
+
         span {
             background-color: #172121;
             color: #5cff9c;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 0 20px; /* Same padding on both sides */
-            height: 100%;  /* Fill the entire height of the copyright section */
+            padding: 0 20px;
+            /* Same padding on both sides */
+            height: 100%;
+            /* Fill the entire height of the copyright section */
             width: 100px;
         }
+    }
+}
+@media only screen and (max-width:1200px){
+    .footer-section{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+@media only screen and (max-width:992px) {
+    .footer-section {
+        padding: 50px;
+
+        .logo{
+            margin-bottom: 24px;
+           
+        }
+       
+    }
+    .navbar{
+        padding: 25px 25px;
+        img{
+            width: 70%;
+        }
+    }
+
+}
+
+@media only screen and (max-width:768px) {
+    .footer-section {
+        padding: 50px;
+    }
+
+    .copyright-section {
+        padding-left: 50px;
+
+        
+
     }
 }

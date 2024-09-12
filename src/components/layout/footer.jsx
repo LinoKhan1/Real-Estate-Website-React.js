@@ -1,6 +1,8 @@
 import React from "react";
 import './layout.scss';
 
+import Capital_logo from "../../assets/images/PrimeStone-Logo.png";
+
 const Footer = () => {
     return (
         <div className="footer-component">
@@ -9,7 +11,7 @@ const Footer = () => {
                 <div className="row">
                     <div className="col-lg-3">
                         <div className="logo">
-                            <h2>Company Logo</h2>
+                            <img  src={Capital_logo}/>
                         </div>
                     </div>
                     <div className="col-lg-3">

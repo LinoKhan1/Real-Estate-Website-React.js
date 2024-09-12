@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './About.scss';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faRavelry, faAtlassian, faAmazon, faYCombinator} from '@fortawesome/free-brands-svg-icons';
+import { faRavelry, faAtlassian, faAmazon, faYCombinator } from '@fortawesome/free-brands-svg-icons';
 // Components 
 import ContactComponent from "../../components/specific/ContactComponent";
 
@@ -40,7 +40,9 @@ const About = () => {
                             <div className="hero-text">
                                 <p>Render helps software teams ship products fast and at any scale. We host everything from hundred-line prototypes to applications with hundreds of services, all with a relentless commitment to reliability and uptime.</p>
                             </div>
-                            <button className="primary-btn">Contact us</button>
+                            <Link to="/contact">
+                                <button className="primary-btn">Contact us</button>
+                            </Link>
                         </div>
                         <div className="col square">
                         </div>
@@ -50,7 +52,7 @@ const About = () => {
                     </div>
                 </div>
                 {/** Team Section */}
-                <div className="team-section">
+                <div className="team-section" >
                     <section className="section">
                         <div className="row">
                             <div className="col-lg-5">
@@ -58,7 +60,8 @@ const About = () => {
                                 <p>
                                     Render is headquartered in San Francisco, California, with remote team members distributed across the globe. We’re always on the lookout to add kind, thoughtful, and exceptionally talented individuals to our team. Drop us a line if you're motivated by the intersection of individual developer experience and global scale.
                                 </p>
-                                <button className="primary-btn">Explore our team</button>
+
+                                <button onClick={() => document.getElementById('leadership-section').scrollIntoView({ behavior: 'smooth' })} className="primary-btn">Explore our team</button>
                             </div>
                             <div className="col-lg-6">
                                 <div className="row image-row">
@@ -88,19 +91,19 @@ const About = () => {
                             </p>
                             <span>
                                 <div className="icons">
-                                <FontAwesomeIcon className="brand" icon={faRavelry} size="3x" />
-                                <FontAwesomeIcon className="brand" icon={faAtlassian} size="3x" />
-                                <FontAwesomeIcon className="brand" icon={faAmazon} size="3x" />
-                                <FontAwesomeIcon className="brand" icon={faYCombinator} size="3x" />
+                                    <FontAwesomeIcon className="brand" icon={faRavelry} size="3x" />
+                                    <FontAwesomeIcon className="brand" icon={faAtlassian} size="3x" />
+                                    <FontAwesomeIcon className="brand" icon={faAmazon} size="3x" />
+                                    <FontAwesomeIcon className="brand" icon={faYCombinator} size="3x" />
                                 </div>
-                                
+
                             </span>
                         </div>
 
                     </section>
                 </div>
                 {/** Leadership Section */}
-                <div className="leadership-section">
+                <div className="leadership-section" id="leadership-section">
                     <section className="section">
                         <div className="title">
                             <h1 className="display-2">Our Leadership</h1>

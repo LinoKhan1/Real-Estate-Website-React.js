@@ -38,7 +38,7 @@ const Contact = () => {
                             </div>
                         </div>
                         <div className="col-lg-7">
-                            <form action="">
+                            <form action="" id="contact-form">
                                 <div className="row">
                                     <div className="col">
                                         <label htmlFor="user_name">First name</label>
