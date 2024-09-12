@@ -1,0 +1,90 @@
+// Contact Component
+.contact-component {
+    position: relative;
+    background-color: #5cff9c;
+    color: #172121;
+
+    .title {
+        h1 {
+            width: 70%;
+            margin-bottom: 100px;
+        }
+    }
+
+    .row {
+        display: flex;
+        align-items: center;
+        /* Ensures vertical alignment of content */
+        flex-wrap: wrap;
+    }
+
+    p {
+        width: auto;
+        /* Adjust width to fit the content */
+        margin-right: 20px;
+        /* Add some space between the paragraph and button */
+        width: 60%;
+        margin-top: 24px;
+
+    }
+
+    .col {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        /* Ensures vertical alignment of the text and button */
+    }
+
+    .secondary-btn {
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 1200px) {
+    .contact-component {
+        .title {
+            h1 {
+                width: 90%;
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width:992px) {
+
+    .contact-component {
+        .row {
+            .col {
+                flex: 100%;
+                max-width: 100%;
+            }
+        }
+
+        .title {
+            h1 {
+                width: 50%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:768px) {
+
+    .contact-component {
+        .title {
+            h1 {
+                width: 90%;
+            }
+
+        }
+        .row{
+            .col{
+                p{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

@@ -7,6 +7,8 @@ import { FaArrowRight } from 'react-icons/fa';
 // Styles & CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Home.scss';
+import ContactComponent from "../../components/specific/ContactComponent"; '../../components/specific/ContactComponent.jsx';
+
 
 // Images
 import Insight_img from '../../assets/images/rent-stabilization-img.webp';
@@ -120,6 +122,9 @@ const Home = () => {
                         </div>
                     </section>
                 </div>
+                <ContactComponent/>
+
+
             </div>
         </div>
     );

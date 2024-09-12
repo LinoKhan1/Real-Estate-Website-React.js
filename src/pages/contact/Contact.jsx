@@ -5,6 +5,9 @@ import './Contact.scss';
 import { FaPhone } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
+import ContactComponent from "../../components/specific/ContactComponent"; '../../components/specific/ContactComponent.jsx';
+
+
 const Contact = () => {
     return (
         <div className="contact-page">
@@ -66,6 +69,7 @@ const Contact = () => {
                     </div>
                 </section>
             </div>
+            <ContactComponent/>
         </div>
     );
 }

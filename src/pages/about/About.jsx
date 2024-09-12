@@ -5,6 +5,10 @@ import { Link } from 'react-router-dom';
 // Styles && CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './About.scss';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faRavelry, faAtlassian, faAmazon, faYCombinator} from '@fortawesome/free-brands-svg-icons';
+// Components 
+import ContactComponent from "../../components/specific/ContactComponent";
 
 // Images
 import Hero_img from '../../assets/images/hero2.png';
@@ -71,22 +75,30 @@ const About = () => {
                 </div>
 
                 {/** Investor Section */}
-                {/*<div className="investor-section">
+                <div className="investor-section">
                     <section className="section">
-                        <div className="row">
-                            <div className="col investor-text">
-                                <h1 className="display-2">Our Backers</h1>
-                                <p>
-                                    We have raised over $75M from world-class investors. Their support of Render's mission helps us to support yours.
-                                </p>
-                            </div>
-                            <div className="col investors">
-                                <img className="img-fluid" src={Investor_img} alt="" />
-
-                            </div>
+                        <div className="title">
+                            <h1 className="display-2">
+                                Our Backers
+                            </h1>
                         </div>
+                        <div className="backers">
+                            <p>
+                                We have raised over $75M from world-class investors. Their support of Render's mission helps us to support yours.
+                            </p>
+                            <span>
+                                <div className="icons">
+                                <FontAwesomeIcon className="brand" icon={faRavelry} size="3x" />
+                                <FontAwesomeIcon className="brand" icon={faAtlassian} size="3x" />
+                                <FontAwesomeIcon className="brand" icon={faAmazon} size="3x" />
+                                <FontAwesomeIcon className="brand" icon={faYCombinator} size="3x" />
+                                </div>
+                                
+                            </span>
+                        </div>
+
                     </section>
-                </div>*/}
+                </div>
                 {/** Leadership Section */}
                 <div className="leadership-section">
                     <section className="section">
@@ -96,25 +108,25 @@ const About = () => {
                         <div className="row">
                             <div className="col">
                                 <img className="img-fluid" src={Leader_img1} alt="Profile picture" />
-                                <h2>John Doe</h2>
-                                <h3>Job Title</h3>
+                                <h2>John Davies</h2>
+                                <h3>Chief Executive Officer</h3>
                             </div>
                             <div className="col">
                                 <img className="img-fluid" src={Leader_img2} alt="Profile picture" />
-                                <h2>John Doe</h2>
-                                <h3>Job Title</h3>
+                                <h2>Rob Mayer</h2>
+                                <h3>Chief Investment Officer</h3>
                             </div>
                             <div className="col">
                                 <img className="img-fluid" src={Leader_img3} alt="Profile picture" />
-                                <h2>John Doe</h2>
-                                <h3>Job Title</h3>
+                                <h2>Peter Thiel</h2>
+                                <h3>Senior Vice President</h3>
                             </div>
                         </div>
                         <div className="row">
                             <div className="col">
                                 <img className="img-fluid" src={Leader_img1} alt="Profile picture" />
-                                <h2>John Doe</h2>
-                                <h3>Job Title</h3>
+                                <h2>Matt Davidson</h2>
+                                <h3>Sales Lead</h3>
                             </div>
                             <div className="col">
                                 <img className="img-fluid" src={Leader_img2} alt="Profile picture" />
@@ -135,7 +147,6 @@ const About = () => {
                     <section className="section">
                         <div className="title-section">
                             <h1 className="display-2">News & Coverage</h1>
-
                         </div>
                         <div className="row">
                             <div className="col-lg-2">
@@ -220,29 +231,8 @@ const About = () => {
                     </section>
                 </div>
                 {/** Contact Section */}
-                <div className="in-touch-section">
-                    <section className="section">
-                        <div className="row">
-                            <div className="col-lg-6">
-                                <div className="title">
-                                    <h1 className="display-2">Start building with Render</h1>
-                                </div>
+                <ContactComponent />
 
-                            </div>
-                        </div>
-
-                        <div className="row">
-                            <div className="col">
-                                <p>
-                                    The modern cloud for developers and teams.
-                                </p>
-                            </div>
-                            <div className="col">
-                                <button className="secondary-btn">Get Started</button>
-                            </div>
-                        </div>
-                    </section>
-                </div>
             </div>
         </div>
     );

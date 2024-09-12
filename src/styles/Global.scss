@@ -7,7 +7,7 @@ html {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
-    font-family: 'ES-Klarheit';
+    font-family: 'ES-Klarheit Medium';
 
 
 
@@ -20,9 +20,10 @@ h1 {
     margin-top: 24px;
     margin-bottom: 24px;
     font-weight: 900;
-    font-family: 'ES-Klarheit';
     font-weight: bold;
     font-style: normal;
+    font-family: 'ES-Klarheit Bold-Italic';
+
 
 }
 
@@ -30,7 +31,8 @@ h2 {
     font-size: 2rem;
     margin-top: 24px;
     margin-bottom: 24px;
-    font-family: 'ES-Klarheit';
+    font-family: 'ES-Klarheit Medium';
+
 
 
 }
@@ -39,16 +41,22 @@ h3 {
     font-size: 1.2rem;
     margin-top: 24px;
     margin-bottom: 24px;
-    font-family: 'ES-Klarheit';
+    font-family: 'ES-Klarheit Medium';
+
 
 }
 
 p {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 100;
     margin-top: 24px;
     margin-bottom: 24px;
-    font-family: 'ES-Klarheit';
+    font-family: 'ES-Klarheit Regular';
+
+
+}
+.nav-link{
+    font-family: 'ES-Klarheit Regular';
 
 }
 
@@ -56,6 +64,8 @@ p {
     font-size: 1.4rem;
     text-decoration: none;
     color: #000;
+    font-family: 'ES-Klarheit Regular';
+
 
 }
 
@@ -70,7 +80,8 @@ li {
     font-size: 1.4rem;
     list-style: none;
     text-decoration: none;
-    font-family: 'ES-Klarheit';
+    font-family: 'ES-Klarheit Regular';
+
 
 }
 
@@ -90,7 +101,8 @@ li {
     padding: 18px 60px;
     border: none;
     font-size: 1.6rem;
-    font-family: 'ES-Klarheit';
+    font-family: 'ES-Klarheit Regular';
+
 
 
 }
@@ -102,7 +114,8 @@ li {
     border: none;
     font-size: 1.6rem;
     margin-top: 24px;
-    font-family: 'ES-Klarheit';
+    font-family: 'ES-Klarheit Regular';
+
 
 
 
@@ -113,7 +126,7 @@ li {
 /* Media devices (landscape tablets, 768px and up)
 
 /* Section */
-@media only screen and (max-width:768px){
+@media only screen and (max-width:768px) {
     .section {
         position: relative;
         padding-left: 30px;
