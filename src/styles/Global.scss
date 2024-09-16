@@ -8,65 +8,34 @@ html {
     padding: 0;
     scroll-behavior: smooth;
     font-family: 'ES-Klarheit Medium';
-
-
-
-
 }
 
 /* Typography */
-h1 {
-    font-size: 4rem;
+h1,h2,h3,p{
     margin-top: 24px;
     margin-bottom: 24px;
-    font-weight: 900;
-    font-weight: bold;
-    font-style: normal;
+
+}
+h1 {
     font-family: 'ES-Klarheit Bold-Italic';
-
-
 }
 
 h2 {
     font-size: 2rem;
-    margin-top: 24px;
-    margin-bottom: 24px;
     font-family: 'ES-Klarheit Medium';
 
-
-
 }
 
-h3 {
-    font-size: 1.2rem;
-    margin-top: 24px;
-    margin-bottom: 24px;
-    font-family: 'ES-Klarheit Medium';
-
-
-}
-
-p {
-    font-size: 1.2rem;
-    font-weight: 100;
-    margin-top: 24px;
-    margin-bottom: 24px;
+h3,p,.nav-link,.link,button {
+    font-size: 1.3rem;
     font-family: 'ES-Klarheit Regular';
-
-
-}
-.nav-link{
-    font-family: 'ES-Klarheit Regular';
-    font-size: 1.2rem;
 
 }
 
 .link {
-    font-size: 1.2rem;
     text-decoration: none;
     color: #172121;
-    font-family: 'ES-Klarheit Regular';
-
+    font-family: 'ES-Klarheit Medium';
 
 }
 
@@ -81,8 +50,7 @@ li {
     font-size: 1.4rem;
     list-style: none;
     text-decoration: none;
-    font-family: 'ES-Klarheit Regular';
-
+    font-family: 'ES-Klarheit Medium';
 
 }
 
@@ -101,9 +69,8 @@ li {
     color: #172121;
     padding: 18px 60px;
     border: none;
-    font-size: 1.2rem;
     font-family: 'ES-Klarheit Regular';
-
+    font-size: 1.3rem;
 
 
 }
@@ -113,12 +80,9 @@ li {
     color: #172121;
     padding: 18px 60px;
     border: none;
-    font-size: 1.2rem;
     margin-top: 24px;
     font-family: 'ES-Klarheit Regular';
-
-
-
+    font-size: 1.3rem;
 
 }
 

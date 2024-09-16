@@ -2,9 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import './Component.scss';
 
-
 const ContactComponent = () => {
-
     return (
         <>
             {/* Contact Component */}
@@ -13,22 +11,21 @@ const ContactComponent = () => {
                     <div className="row">
                         <div className="col-lg-6">
                             <div className="title">
-                                <h1 className="display-2">Start building with Render</h1>
+                                <h1 className="display-2">Start Your Investment Journey with Us</h1>
                             </div>
-
                         </div>
                     </div>
 
                     <div className="row">
                         <div className="col">
                             <p>
-                                The modern cloud for developers and teams.
+                                Discover how Prime Stone Capital can help you maximize your returns with strategic real estate investments. Our team of experts is here to guide you every step of the way.
                             </p>
                         </div>
                         <div className="col">
                             <button className="secondary-btn">
                                 <Link className="link" to="/contact">
-                                    Get Started
+                                    Contact Us
                                 </Link>
                             </button>
                         </div>
@@ -38,4 +35,5 @@ const ContactComponent = () => {
         </>
     );
 }
+
 export default ContactComponent;

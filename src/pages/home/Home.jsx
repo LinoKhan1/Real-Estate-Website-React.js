@@ -1,14 +1,14 @@
 // React
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import LazyLoad from "react-lazyload";
 // Icons
 import { FaArrowRight } from 'react-icons/fa';
 
 // Styles & CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Home.scss';
-import ContactComponent from "../../components/specific/ContactComponent"; '../../components/specific/ContactComponent.jsx';
-
+import ContactComponent from "../../components/specific/ContactComponent";
 
 // Images
 import Insight_img from '../../assets/images/rent-stabilization-img.webp';
@@ -57,10 +57,10 @@ const Home = () => {
                         <div className="row">
                             <div className="col-lg-5">
                                 <h1 className="display-1">
-                                    Intelligence. Transparency. Reliability.
+                                    Invest with Confidence. Grow with Us.
                                 </h1>
                                 <p>
-                                    Maverick Real Estate Partners is a private equity fund manager that invests in commercial real estate credit in New York City.
+                                    Prime Stone Capital specializes in high-growth real estate investments, offering unparalleled transparency and strategic insights into the New York City real estate market.
                                 </p>
                             </div>
                         </div>
@@ -72,11 +72,11 @@ const Home = () => {
                                     </p>
                                     <div className="row">
                                         <div className="col">
-                                            <h3 className="hero-number" data-target="142">0</h3>
-                                            <h3>Loans</h3>
+                                            <h3 className="hero-number" data-target="45">0</h3>
+                                            <h3>Projects</h3>
                                         </div>
                                         <div className="col">
-                                            <h3 className="hero-number" data-target="972">$0</h3>
+                                            <h3 className="hero-number" data-target="65000000">$0</h3>
                                             <h3>Invested</h3>
                                         </div>
                                     </div>
@@ -101,30 +101,30 @@ const Home = () => {
                         <div className="row">
                             <div className="col-lg-6">
                                 <div className="title">
-                                    <h1 className="display-1">Latest Insight</h1>
+                                    <h1 className="display-1">Latest Insights</h1>
                                 </div>
                             </div>
                             <div className="col-lg-6">
                                 <div className="insight-image">
-                                    <img className="img-fluid" src={Insight_img} alt="Rent Stabilization Image" />
+                                    <LazyLoad height={200} offset={100}>
+                                        <img className="img-fluid" src={Insight_img} alt="Real Estate Investment Insights" />
+                                    </LazyLoad>
                                 </div>
                             </div>
                         </div>
                         <div className="row">
                             <div className="col-lg-6 insight-preview">
                                 <h2>
-                                    Rent Stabilization and Regional Banks
+                                    Navigating the NYC Real Estate Market
                                 </h2>
-                                <Link className="link" to="/">
-                                    Read our Spring 2024 Report <FaArrowRight />
+                                <Link className="link" to="/insights">
+                                    Explore Our Latest Market Report <FaArrowRight />
                                 </Link>
                             </div>
                         </div>
                     </section>
                 </div>
-                <ContactComponent/>
-
-
+                <ContactComponent />
             </div>
         </div>
     );

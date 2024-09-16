@@ -20,17 +20,18 @@
 
         }
 
-        .text {
+       
+
+        .hero-text {
             background-color: #0D0D0D;
             color: #fff;
             position: relative;
             padding-left: 50px;
+            p{
+                padding-top: 220px;
+            }
         }
 
-        .hero-text {
-            position: relative;
-            padding-top: 220px;
-        }
 
         button {
             margin-bottom: 24px;
@@ -235,7 +236,9 @@
         .hero-section {
 
             .hero-text {
-                padding-top: 150px;
+                p{
+                    padding-top: 150px;
+                }
             }
         }
     }
@@ -259,9 +262,9 @@
             }
 
             .hero-text {
-                padding-top: 24px;
-
+                
                 p {
+                    padding-top: 24px;
                     width: 50%;
                 }
             }
@@ -319,7 +322,6 @@
             }
 
             .hero-text {
-                padding-top: 24px;
 
                 p {
                     width: 70%;
@@ -348,6 +350,8 @@
 
         /* News Section */
         .news-section {
+            padding-left: 50px;
+            padding-right: 50px;
 
 
             .title-section {
@@ -364,8 +368,7 @@
 
         /* Hero Section */
         .hero-section {
-            padding-left: 25px;
-            padding-right: 25px;
+            
 
             .row {
                 .col-lg-5 {
@@ -379,25 +382,47 @@
 
             .hero-text {
                 padding-top: 24px;
+                padding-left: 30px;
+                padding-right: 30px;
+
 
                 p {
                     width: 100%;
                 }
+                button{
+                    text-decoration: none;
+                }
+            }
+        }
+        /* Investor Section */
+        .investor-section{
+            p{
+                width: 100%;
             }
         }
 
         /* News Section */
         .news-section {
+            .section{
+                padding-left: 0px;
+                padding-right: 0px;
+            }
 
+            padding-left: 30px;
+            padding-right: 30px;
             .title-section {
                 padding-left: 0px;
             }
 
             .article {
+                text-align: center;
 
                 .col {
                     flex: 100%;
                     max-width: 100%;
+                    p{
+                        width: 100%;
+                    }
                 }
             }
         }

@@ -1,35 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import LazyLoad from "react-lazyload";
 import './layout.scss'; // Import the updated stylesheet
 
-import Capital_logo from "../../assets/images/PrimeStone-Logo.png";
+import PrimeStoneCapital_logo from "../../assets/images/PrimeStone-Logo.webp";
 
 const Navbar = () => {
+    const [isNavOpen, setIsNavOpen] = useState(false);
+
+    const toggleNav = () => {
+        setIsNavOpen(!isNavOpen);
+    };
+
     return (
         <nav className="navbar navbar-expand-lg">
             <div className="container-fluid">
-                <Link className="navbar-brand link text-light" to="/"><img className="img-fluid" src={Capital_logo}/></Link>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <Link className="navbar-brand link text-light" to="/">
+                    <LazyLoad height={200} offset={100}>
+                        <img className="img-fluid" src={PrimeStoneCapital_logo} alt="Prime Stone Capital Logo" />
+                    </LazyLoad>
+                </Link>
+                <button className="navbar-toggler" type="button" onClick={toggleNav} aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                <div className={`collapse navbar-collapse ${isNavOpen ? 'show' : ''}`} id="navbarSupportedContent">
                     <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <Link className="nav-link text-light active" aria-current="page" to="/">
-                                Home
-                            </Link>
+                            <Link className="nav-link text-white" aria-current="page" to="/" onClick={toggleNav}>Home</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link text-light" to="/about">About</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link text-light" to="/news">Insights</Link>
+                            <Link className="nav-link text-light" to="/about" onClick={toggleNav}>About</Link>
                         </li>
                         <li className="nav-item">
                             <button className="primary-btn">
-                                <Link className="link" to="/contact">
-                                    Contact us
-                                </Link>
+                                <Link className="link" to="/contact">Contact us</Link>
                             </button>
                         </li>
                     </ul>
@@ -37,6 +41,6 @@ const Navbar = () => {
             </div>
         </nav>
     );
-}
+};
 
 export default Navbar;
