@@ -1,0 +1,18 @@
+[build]
+  # Specify the build command for your React app
+  command = "npm run build"
+  
+  # Specify the directory that contains the built files
+  publish = "build"
+
+# Redirects and rewrites (optional)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = true
+
+# Netlify Functions (optional)
+[functions]
+  # The directory where Netlify Functions are located
+  directory = "netlify-functions"
