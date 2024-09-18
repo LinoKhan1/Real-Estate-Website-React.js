@@ -1,256 +1,221 @@
-// About.scss
+// Variables
+$dark-color: #172121;
+$light-color: #fff;
+$accent-color: #0D0D0D;
+$background-pattern: url('../../assets/images/grid-pattern.webp');
+$font-size-large: 4rem;
+$font-size-medium: 1.5rem;
+$font-size-small: 1.2rem;
+$font-weight-light: 300;
+$font-weight-bold: bold;
+$font-weight-semi-bold: 600;
 
-// Hero Section
+// Global Styles
 .about-page {
+    // Hero Section
     .hero-section {
-        background-image: url('../../assets/images/grid-pattern.png');
+        background-image: $background-pattern;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        /* 5% opacity */
+        color: $light-color;
         margin-top: 0;
-        color: #fff;
 
         h1 {
-            font-weight: 300;
+            font-weight: $font-weight-light;
             padding-top: 50px;
             font-family: 'ES-Klarheit Light-Italic';
-
-
         }
 
-       
-
         .hero-text {
-            background-color: #0D0D0D;
-            color: #fff;
+            background-color: $accent-color;
+            color: $light-color;
             position: relative;
             padding-left: 50px;
-            p{
+
+            p {
                 padding-top: 220px;
             }
         }
 
-
         button {
             margin-bottom: 24px;
         }
     }
 
-}
+    // Team Section
+    .team-section {
+        background-color: $dark-color;
+        color: $light-color;
 
-
-// Our team
-/*.team-section {
-
-    background-color: #0D0D0D;
-    color: #fff;
-
-    h1 {
-        margin-bottom: 75px;
-    }
-}*/
-.team-section {
-    background-color: #172121;
-    color: #fff;
-
-    .col-lg-5 {
-        h1 {
-            padding-bottom: 75px;
-        }
-
-        p {
-            width: 80%;
-        }
-
-        button {
-            margin-bottom: 24px;
-        }
-
-    }
-
-
-
-
-}
-
-.image-row {
-    position: relative;
-    padding-left: 150px;
-}
-
-.larger-image {
-    position: relative;
-
-}
-
-.smaller-image {
-    position: absolute;
-    width: 33%;
-    /* Approximately one-third of the size */
-    bottom: 0;
-    right: 0;
-    transform: translate(-30%, 30%);
-    /* Adjust the position to overlap */
-}
-
-.img-fluid {
-    width: 100%;
-    height: auto;
-}
-
-// Investors
-.investor-section {
-    position: relative;
-    background-color: #0D0D0D;
-    //background-image: url('../../assets/images/grid-patter-black.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #fff;
-    text-align: center;
-
-    h1 {
-        margin-bottom: 75px;
-    }
-
-    p {
-        width: 60%;
-        margin: auto;
-    }
-
-    .backers {
-        .icons {
-            position: relative;
-            margin-top: 50px;
-
-            .brand {
-                margin: 10px;
-
+        .col-lg-5 {
+            h1 {
+                padding-bottom: 75px;
             }
-        }
 
-    }
+            p {
+                width: 80%;
+            }
 
-
-
-
-}
-
-// Leadership
-.leadership-section {
-    background-color: #172121;
-    color: #fff;
-
-    h1 {
-        padding-bottom: 75px;
-    }
-    h2{
-        font-size: 1.4rem;
-    }
-    h3{
-        font-size: 1.1rem;
-    }
-
-    .row {
-        position: relative;
-        padding-left: 250px;
-        display: flex;
-        flex-wrap: wrap;
-
-        .col {
-            padding: 50px;
-            flex: 1;
-
-            img {
+            button {
                 margin-bottom: 24px;
             }
         }
     }
-}
 
-// News
-.news-section {
-    .section {
-        padding-left: 0px;
-        padding-right: 50px;
+    // Image Row
+    .image-row {
+        position: relative;
+        padding-left: 150px;
     }
 
-    .title-section {
+    .larger-image {
         position: relative;
-        padding-left: 200px;
+    }
+
+    .smaller-image {
+        position: absolute;
+        width: 33%;
+        bottom: 0;
+        right: 0;
+        transform: translate(-30%, 30%);
+    }
+
+    .img-fluid {
+        width: 100%;
+        height: auto;
+    }
+
+    // Investor Section
+    .investor-section {
+        position: relative;
+        background-color: $accent-color;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: $light-color;
+        text-align: center;
 
         h1 {
-            padding-bottom: 75px;
+            margin-bottom: 75px;
         }
 
-
-
-    }
-
-    .article {
-       
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-
-        display: flex;
-        flex-wrap: wrap;
-
-        .col {
-            flex: 1;
-            margin: 10px;
-        }
-
-        img {
+        p {
             width: 60%;
+            margin: auto;
         }
 
-        .news-preview {
-            display: flex;
-            justify-content: center;
-            /* Optional: Centers horizontally if needed */
-            /* Vertically centers the content */
-            flex-direction: column;
+        .backers {
+            .icons {
+                position: relative;
+                margin-top: 50px;
 
-            h3 {
-                font-size: 1rem;
-            }
-            p{
-                font-size: 1.2rem;
-                width: 80%;
-            }
-
-        }
-    }
-
-}
-
-
-
-/* Media queries */
-
-@media only screen and (max-width: 1400px) {
-    .about-page {
-
-        /* Hero Section */
-        .hero-section {
-
-            .hero-text {
-                p{
-                    padding-top: 150px;
+                .brand {
+                    margin: 10px;
                 }
             }
         }
     }
 
+    // Leadership Section
+    .leadership-section {
+        background-color: $dark-color;
+        color: $light-color;
+
+        h1 {
+            padding-bottom: 75px;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+        }
+
+        .row {
+            position: relative;
+            padding-left: 250px;
+            display: flex;
+            flex-wrap: wrap;
+
+            .col {
+                padding: 50px;
+                flex: 1;
+
+                img {
+                    margin-bottom: 24px;
+                }
+            }
+        }
+    }
+
+    // News Section
+    .news-section {
+        .section {
+            padding-left: 0;
+            padding-right: 50px;
+        }
+
+        .title-section {
+            position: relative;
+            padding-left: 200px;
+
+            h1 {
+                padding-bottom: 75px;
+            }
+        }
+
+        .article {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-wrap: wrap;
+
+            .col {
+                flex: 1;
+                margin: 10px;
+            }
+
+            img {
+                width: 60%;
+            }
+
+            .news-preview {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                h3 {
+                    font-size: 1rem;
+                }
+
+                p {
+                    font-size: $font-size-small;
+                    width: 80%;
+                }
+            }
+        }
+    }
+}
+
+// Media Queries
+@media only screen and (max-width: 1400px) {
+    .about-page {
+        .hero-section {
+            .hero-text {
+                p {
+                    padding-top: 150px;
+                }
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 1200px) {
     .about-page {
-
-        /* Hero Section */
         .hero-section {
-
             .row {
                 .col-lg-5 {
                     width: 100%;
@@ -262,7 +227,6 @@
             }
 
             .hero-text {
-                
                 p {
                     padding-top: 24px;
                     width: 50%;
@@ -281,15 +245,12 @@
         }
 
         .image-row {
-            position: relative;
-            padding: 0px;
+            padding: 0;
         }
 
-        /* Leadership section */
         .leadership-section {
             .row {
-                position: relative;
-                padding-left: 0px;
+                padding-left: 0;
 
                 .col {
                     padding: 50px;
@@ -301,16 +262,11 @@
             }
         }
     }
-
 }
 
 @media only screen and (max-width: 992px) {
-
     .about-page {
-
-        /* Hero Section */
         .hero-section {
-
             .row {
                 .col-lg-5 {
                     width: 100%;
@@ -322,54 +278,38 @@
             }
 
             .hero-text {
-
                 p {
                     width: 70%;
                 }
             }
         }
 
-        /* Team Section */
         .team-section {
-
-
             .col-lg-5 {
-
                 p {
                     width: 100%;
                 }
-
             }
-
         }
 
         .image-row {
-            position: relative;
-            padding: 0px;
+            padding: 0;
         }
 
-        /* News Section */
         .news-section {
             padding-left: 50px;
             padding-right: 50px;
 
-
             .title-section {
-                padding-left: 0px;
+                padding-left: 0;
             }
         }
-
     }
-
 }
 
 @media only screen and (max-width: 768px) {
     .about-page {
-
-        /* Hero Section */
         .hero-section {
-            
-
             .row {
                 .col-lg-5 {
                     width: 100%;
@@ -385,33 +325,28 @@
                 padding-left: 30px;
                 padding-right: 30px;
 
-
                 p {
                     width: 100%;
                 }
-                button{
+
+                button {
                     text-decoration: none;
                 }
             }
         }
-        /* Investor Section */
-        .investor-section{
-            p{
+
+        .investor-section {
+            p {
                 width: 100%;
             }
         }
 
-        /* News Section */
         .news-section {
-            .section{
-                padding-left: 0px;
-                padding-right: 0px;
-            }
-
             padding-left: 30px;
             padding-right: 30px;
+
             .title-section {
-                padding-left: 0px;
+                padding-left: 0;
             }
 
             .article {
@@ -420,46 +355,43 @@
                 .col {
                     flex: 100%;
                     max-width: 100%;
-                    p{
+
+                    p {
                         width: 100%;
                     }
                 }
             }
         }
-    }
 
-    .leadership-section {
-        .row {
-            .col {
-                flex: 100%;
-                max-width: 80%;
-                margin: auto;
-                padding: 0px;
+        .leadership-section {
+            .row {
+                .col {
+                    flex: 100%;
+                    max-width: 80%;
+                    margin: auto;
+                    padding: 0;
 
-                img {
-                    margin-bottom: 0px;
+                    img {
+                        margin-bottom: 0;
+                    }
                 }
-
             }
         }
     }
-
 }
 
 @media only screen and (max-width: 600px) {
-
     .leadership-section {
         .row {
             .col {
                 flex: 100%;
                 max-width: 100%;
                 margin: auto;
-                padding: 0px;
+                padding: 0;
 
                 img {
-                    margin-bottom: 0px;
+                    margin-bottom: 0;
                 }
-
             }
         }
     }

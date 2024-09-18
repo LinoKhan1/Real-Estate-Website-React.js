@@ -1,102 +1,88 @@
-/* Global Styles */
-@import url(./font.css);
+// Global Styles
+@import url('./font.css');
 
+// Variables
+$font-family-regular: 'ES-Klarheit Regular';
+$font-family-medium: 'ES-Klarheit Medium';
+$font-family-bold-italic: 'ES-Klarheit Bold-Italic';
+$primary-color: #5cff9c;
+$secondary-color: #fff;
+$text-color: #172121;
 
+// Mixins
+@mixin button-styles($bg-color, $text-color) {
+    background-color: $bg-color;
+    color: $text-color;
+    padding: 18px 60px;
+    border: none;
+    font-family: $font-family-regular;
+    font-size: 1.3rem;
+}
+
+// Global Styles
 body,
 html {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
-    font-family: 'ES-Klarheit Medium';
+    font-family: $font-family-medium;
 }
 
-/* Typography */
-h1,h2,h3,p{
-    margin-top: 24px;
-    margin-bottom: 24px;
-
+// Typography
+h1, h2, h3, p {
+    margin: 24px 0;
 }
+
 h1 {
-    font-family: 'ES-Klarheit Bold-Italic';
+    font-family: $font-family-bold-italic;
 }
 
 h2 {
     font-size: 2rem;
-    font-family: 'ES-Klarheit Medium';
-
+    font-family: $font-family-medium;
 }
 
-h3,p,.nav-link,.link,button {
+h3, p, .nav-link, .link, button {
     font-size: 1.3rem;
-    font-family: 'ES-Klarheit Regular';
-
+    font-family: $font-family-regular;
 }
 
 .link {
     text-decoration: none;
-    color: #172121;
-    font-family: 'ES-Klarheit Medium';
-
+    color: $text-color;
+    font-family: $font-family-medium;
 }
 
 ul {
-    text-decoration: none;
     margin-left: 0;
     padding: 0;
-
+    list-style: none;
 }
 
 li {
     font-size: 1.4rem;
-    list-style: none;
-    text-decoration: none;
-    font-family: 'ES-Klarheit Medium';
-
+    font-family: $font-family-medium;
 }
 
-/* Section */
+// Section
 .section {
     position: relative;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding: 100px 50px;
 }
 
-/* Buttons */
+// Buttons
 .primary-btn {
-    background-color: #5cff9c;
-    color: #172121;
-    padding: 18px 60px;
-    border: none;
-    font-family: 'ES-Klarheit Regular';
-    font-size: 1.3rem;
-
-
+    @include button-styles($primary-color, $text-color);
 }
 
 .secondary-btn {
-    background-color: #fff;
-    color: #172121;
-    padding: 18px 60px;
-    border: none;
+    @include button-styles($secondary-color, $text-color);
     margin-top: 24px;
-    font-family: 'ES-Klarheit Regular';
-    font-size: 1.3rem;
-
 }
 
-/* Media queries */
-
-/* Media devices (landscape tablets, 768px and up)
-
-/* Section */
-@media only screen and (max-width:768px) {
+// Media Queries
+@media only screen and (max-width: 768px) {
     .section {
-        position: relative;
-        padding-left: 30px;
-        padding-right: 30px;
-        padding-top: 50px;
-        padding-bottom: 50px;
+        padding: 50px 30px;
     }
 }

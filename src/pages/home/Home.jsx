@@ -1,41 +1,43 @@
 // React
-import React, { useEffect } from "react";
+import React, { useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
 import LazyLoad from "react-lazyload";
 // Icons
-import { FaArrowRight } from 'react-icons/fa';
+import { FaArrowRight } from 'react-icons/fa';  // Import only needed icon
 
 // Styles & CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Home.scss';
-import ContactComponent from "../../components/specific/ContactComponent";
+
+// Lazy load ContactComponent
+const ContactComponent = React.lazy(() => import("../../components/specific/ContactComponent"));
 
 // Images
 import Insight_img from '../../assets/images/rent-stabilization-img.webp';
 
 const Home = () => {
+
+    // Memoizing animateNumbers to avoid recreating it on every render
+    const animateNumbers = useCallback(() => {
+        const numbers = document.querySelectorAll('.hero-number');
+        numbers.forEach(number => {
+            const target = parseInt(number.getAttribute('data-target'), 10);
+            let count = 0;
+            const increment = Math.ceil(target / 100);
+
+            const updateNumber = () => {
+                if (count < target) {
+                    count += increment;
+                    number.textContent = `${Math.min(count, target)}`;
+                    requestAnimationFrame(updateNumber);  // Use requestAnimationFrame for smoother animations
+                }
+            };
+            updateNumber();
+        });
+    }, []);
+
     useEffect(() => {
-        // Function to animate numbers
-        const animateNumbers = () => {
-            const numbers = document.querySelectorAll('.hero-number');
-            numbers.forEach(number => {
-                const target = parseInt(number.getAttribute('data-target'));
-                let count = 0;
-                const increment = Math.ceil(target / 100);
-
-                const updateNumber = () => {
-                    if (count < target) {
-                        count += increment;
-                        number.textContent = `${Math.min(count, target)}`;
-                        setTimeout(updateNumber, 10);
-                    }
-                };
-
-                updateNumber();
-            });
-        };
-
-        // Use Intersection Observer to trigger animation when in view
+        // Intersection Observer to animate numbers when in view
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -45,8 +47,13 @@ const Home = () => {
             });
         });
 
-        observer.observe(document.querySelector('.investment-section'));
-    }, []);
+        const investmentSection = document.querySelector('.investment-section');
+        if (investmentSection) observer.observe(investmentSection);
+
+        return () => {
+            if (investmentSection) observer.unobserve(investmentSection);
+        };
+    }, [animateNumbers]);
 
     return (
         <div className="home-page">
@@ -84,15 +91,6 @@ const Home = () => {
                             </div>
                         </div>
                     </section>
-                    <div className="map-background">
-                        {/* Google Map iframe */}
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.308594940228!2d-74.00601548459411!3d40.71277577932962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a2f19d1a8a5%3A0x2e5b6182b2d2a95d!2sOne%20World%20Trade%20Center!5e0!3m2!1sen!2sus!4v1639168567617!5m2!1sen!2sus"
-                            style={{ border: 0, width: '100%', height: '100%', position: 'absolute', top: 0, left: 0 }}
-                            allowFullScreen
-                            loading="lazy"
-                        ></iframe>
-                    </div>
                 </div>
 
                 {/** Insights Section */}
@@ -124,7 +122,11 @@ const Home = () => {
                         </div>
                     </section>
                 </div>
-                <ContactComponent />
+
+                {/** Contact Section - Lazy-loaded */}
+                <React.Suspense fallback={<div>Loading...</div>}>
+                    <ContactComponent />
+                </React.Suspense>
             </div>
         </div>
     );

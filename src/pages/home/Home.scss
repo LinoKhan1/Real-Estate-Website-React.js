@@ -1,15 +1,20 @@
-// Home.scss
+// Variables
+$dark-color: #172121;
+$light-color: #fff;
+$accent-color: #E8F1EF;
+$font-size-large: 4rem;
+$font-size-medium: 1.5rem;
+$font-weight-bold: bold;
+$font-weight-semi-bold: 600;
 
-/* Hero Section */
+// Hero Section
 .hero-section {
-    background-color: #172121;
-    color: #fff;
+    background-color: $dark-color;
+    color: $light-color;
     position: relative;
     overflow: hidden;
 
-    
-    /* Ensure map stays within section bounds */
-
+    // Map background
     .map-background {
         position: absolute;
         top: 0;
@@ -17,24 +22,20 @@
         width: 100%;
         height: 100%;
         z-index: -1;
-        /* Send map behind content */
         filter: brightness(50%);
-        /* Dim the map to blend with background */
     }
 
     .section {
         position: relative;
         z-index: 1;
-        /* Ensure content is above the map */
 
         .investment-section {
-            position: relative;
             padding-top: 150px;
 
             .hero-number {
-                font-size: 4rem;
-                font-weight: bold;
-                border-bottom: 1px solid #fff;
+                font-size: $font-size-large;
+                font-weight: $font-weight-bold;
+                border-bottom: 1px solid $light-color;
                 margin: 0;
                 padding: 0;
             }
@@ -47,53 +48,43 @@
                 .col {
                     flex: 1;
                 }
-
             }
 
             h3 {
-                font-size: 1.5rem;
-                font-weight: bold;
+                font-size: $font-size-medium;
+                font-weight: $font-weight-bold;
                 margin: 0;
             }
         }
     }
 }
 
-/* Insights Section */
+// Insights Section
 .insights-section {
-
-
     .insight-preview {
-        position: relative;
         padding: 50px;
-        background-color: #E8F1EF;
+        background-color: $accent-color;
 
         h2 {
             margin-bottom: 50px;
-            font-weight: 600;
-
+            font-weight: $font-weight-semi-bold;
         }
 
         .link {
-            position: relative;
             display: inline-flex;
             align-items: center;
-            font-weight: 600;
-
+            font-weight: $font-weight-semi-bold;
 
             svg {
                 margin-left: 15px;
                 font-size: 30px;
             }
         }
-
     }
-
 }
 
-/* Media queries */
-@media only screen and (max-width:768px) {
-
+// Media Queries
+@media only screen and (max-width: 768px) {
     .hero-section {
         .section {
             .investment-section {
@@ -106,8 +97,5 @@
                 }
             }
         }
-
     }
-
-
 }

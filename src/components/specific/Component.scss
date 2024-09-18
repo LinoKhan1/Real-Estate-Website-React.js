@@ -1,59 +1,64 @@
-// Contact Component
+// Define variables for colors and dimensions
+$contact-bg-color: #5cff9c;
+$contact-text-color: #172121;
+
+$h1-width-desktop: 80%;
+$h1-width-large: 90%;
+$h1-width-medium: 50%;
+$h1-width-small: 90%;
+
+$margin-bottom-large: 100px;
+$margin-top: 24px;
+$margin-right: 20px;
+
+// Contact Component Styles
 .contact-component {
     position: relative;
-    background-color: #5cff9c;
-    color: #172121;
+    background-color: $contact-bg-color;
+    color: $contact-text-color;
 
     .title {
         h1 {
-            width: 80%;
-            margin-bottom: 100px;
+            width: $h1-width-desktop;
+            margin-bottom: $margin-bottom-large;
         }
     }
 
     .row {
         display: flex;
         align-items: center;
-        /* Ensures vertical alignment of content */
         flex-wrap: wrap;
     }
 
     p {
-        width: auto;
-        /* Adjust width to fit the content */
-        margin-right: 20px;
-        /* Add some space between the paragraph and button */
-        width: 60%;
-        margin-top: 24px;
-
+        margin-right: $margin-right;
+        margin-top: $margin-top;
+        width: 60%; // Adjust width to fit the content
     }
 
     .col {
         display: flex;
         flex: 1;
-        align-items: center;
-        /* Ensures vertical alignment of the text and button */
+        align-items: center; // Vertical alignment
     }
 
     .secondary-btn {
         width: 100%;
     }
-
 }
 
+// Responsive Styles
 @media only screen and (max-width: 1200px) {
     .contact-component {
         .title {
             h1 {
-                width: 90%;
+                width: $h1-width-large;
             }
         }
     }
-
 }
 
-@media only screen and (max-width:992px) {
-
+@media only screen and (max-width: 992px) {
     .contact-component {
         .row {
             .col {
@@ -64,24 +69,23 @@
 
         .title {
             h1 {
-                width: 50%;
+                width: $h1-width-medium;
             }
         }
     }
 }
 
-@media only screen and (max-width:768px) {
-
+@media only screen and (max-width: 768px) {
     .contact-component {
         .title {
             h1 {
-                width: 90%;
+                width: $h1-width-small;
             }
-
         }
-        .row{
-            .col{
-                p{
+
+        .row {
+            .col {
+                p {
                     width: 100%;
                 }
             }
