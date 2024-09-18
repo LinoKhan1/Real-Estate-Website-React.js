@@ -1,7 +1,8 @@
 [build]
   # Specify the build command for your React app
   command = "npm run build"
-  
+  publish = "dist" # This is usually "dist" or "build" for Vite
+
   # Specify the directory that contains the built files
   publish = "build"
 
