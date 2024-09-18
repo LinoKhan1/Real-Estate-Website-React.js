@@ -13,7 +13,7 @@ import { faRavelry, faAtlassian, faAmazon, faYCombinator } from '@fortawesome/fr
 import ContactComponent from "../../components/specific/ContactComponent";
 import HeroSection from "./HeroSection";
 import LeadershipSection from "./LeadershipSection";
-import NewsSection from "./NewsSection.JSX";
+import NewsSection from "./NewsSection";
 // Images
 import Team_img1 from '../../assets/images/team1.webp';
 import Team_img2 from '../../assets/images/team2.webp';
