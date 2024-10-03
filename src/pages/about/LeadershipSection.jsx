@@ -1,6 +1,5 @@
 // React
 import React from 'react';
-import LazyLoad from 'react-lazyload';
 
 // Images
 import Leader_img1 from '../../assets/images/Martin_profile.webp';
@@ -23,9 +22,7 @@ const LeadershipSection = () => {
                 <div className="row ">
                     {leaders.map((leaders, index) => (
                         <div className="col" key={index}>
-                            <LazyLoad height={200} offset={100}>
                                 <img className="img-fluid" src={leaders.imgSrc} alt={leaders.altText} />
-                            </LazyLoad>
                             <h2>{leaders.name}</h2>
                             <h3>{leaders.title}</h3>
                         </div>

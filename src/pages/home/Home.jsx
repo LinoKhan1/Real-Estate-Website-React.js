@@ -1,7 +1,6 @@
 // React
 import React, { useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
-import LazyLoad from "react-lazyload";
 // Icons
 import { FaArrowRight } from 'react-icons/fa';  // Import only needed icon
 
@@ -104,9 +103,7 @@ const Home = () => {
                             </div>
                             <div className="col-lg-6">
                                 <div className="insight-image">
-                                    <LazyLoad height={200} offset={100}>
                                         <img className="img-fluid" src={Insight_img} alt="Real Estate Investment Insights" />
-                                    </LazyLoad>
                                 </div>
                             </div>
                         </div>

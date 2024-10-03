@@ -1,6 +1,5 @@
 import React from "react";
 import './layout.scss';
-import LazyLoad from "react-lazyload";
 
 import PrimeStoneCapital_logo from "../../assets/images/PrimeStone-logo.webp";
 
@@ -12,9 +11,7 @@ const Footer = () => {
                 <div className="row">
                     <div className="col-lg-3">
                         <div className="logo">
-                            <LazyLoad height={200} offset={100}>
-                                <img src={PrimeStoneCapital_logo} alt="Prime Stone Capital Logo" />
-                            </LazyLoad>
+                            <img src={PrimeStoneCapital_logo} alt="Prime Stone Capital Logo" />
                         </div>
                     </div>
                     <div className="col-lg-3">

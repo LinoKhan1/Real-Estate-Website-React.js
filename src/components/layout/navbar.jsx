@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import LazyLoad from "react-lazyload";
 import './layout.scss'; // Import the updated stylesheet
 
 import PrimeStoneCapital_logo from "../../assets/images/PrimeStone-logo.webp";
@@ -16,9 +15,7 @@ const Navbar = () => {
         <nav className="navbar navbar-expand-lg">
             <div className="container-fluid">
                 <Link className="navbar-brand link text-light" to="/">
-                    <LazyLoad height={200} offset={100}>
-                        <img className="img-fluid" src={PrimeStoneCapital_logo} alt="Prime Stone Capital Logo" />
-                    </LazyLoad>
+                    <img className="img-fluid" src={PrimeStoneCapital_logo} alt="Prime Stone Capital Logo" />
                 </Link>
                 <button className="navbar-toggler" type="button" onClick={toggleNav} aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>

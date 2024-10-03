@@ -1,6 +1,5 @@
 // React
 import React from 'react';
-import LazyLoad from 'react-lazyload';
 import { Link } from 'react-router-dom';
 
 // Images
@@ -28,9 +27,7 @@ const HeroSection = () => {
                 <div className="col square">
                 </div>
                 <div className="col-lg-5">
-                    <LazyLoad height={200} offset={100}>
                         <img className="img-fluid" src={Hero_img} alt="Hero Image" />
-                    </LazyLoad>
                 </div>
             </div>
         </div>

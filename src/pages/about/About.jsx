@@ -1,7 +1,5 @@
 // React
 import React from "react";
-import { Link } from 'react-router-dom';
-import LazyLoad from "react-lazyload";
 // Styles && CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './About.scss';
@@ -40,14 +38,10 @@ const About = () => {
                             <div className="col-lg-6">
                                 <div className="row image-row">
                                     <div className="col larger-image">
-                                        <LazyLoad height={200} offset={100}>
                                             <img className="img-fluid" src={Team_img2} alt="Prime stone Capital Team" />
-                                        </LazyLoad>
                                     </div>
                                     <div className="col smaller-image">
-                                        <LazyLoad height={200} offset={100}>
                                             <img className="img-fluid" src={Team_img1} alt="Prime Stone Capital Team" />
-                                        </LazyLoad>
                                     </div>
                                 </div>
                             </div>

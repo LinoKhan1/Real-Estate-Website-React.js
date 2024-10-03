@@ -4,10 +4,13 @@ import './Contact.scss';
 
 // Lazy load ContactComponent
 const ContactComponent = React.lazy(() => import("../../components/specific/ContactComponent"));
-import ContactForm from './ContactForm';
 import ContactInfo from './ContactInfo';
+import ContactForm from './ContactForm';
 
 const Contact = () => {
+
+
+    
     return (
         <div className="contact-page">
             {/** Hero Section */}

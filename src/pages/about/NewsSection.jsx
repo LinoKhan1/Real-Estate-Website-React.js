@@ -1,6 +1,5 @@
 // React
 import React from 'react';
-import LazyLoad from 'react-lazyload';
 
 // Images
 import WSJ_logo from '../../assets/images/wsj-logo.webp';
@@ -55,9 +54,7 @@ const NewsSection = () => {
                             <div className="row article">
                                 <div className="col">
                                     <div className="title-img">
-                                        <LazyLoad height={200} offset={100}>
-                                            <img className="img-fluid" src={article.logo} alt={article.alt} />
-                                        </LazyLoad>
+                                        <img className="img-fluid" src={article.logo} alt={article.alt} />
                                     </div>
                                 </div>
                                 <div className="col news-preview">
