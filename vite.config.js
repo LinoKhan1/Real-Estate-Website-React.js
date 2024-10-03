@@ -1,10 +1,9 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
   build: {
-    assetsDir: 'assets', // Ensure assets are placed in the 'assets' directory inside 'dist'
+    assetsInlineLimit: 0, // Set to 0 to disable inlining and ensure all assets are copied
   },
-})
+});

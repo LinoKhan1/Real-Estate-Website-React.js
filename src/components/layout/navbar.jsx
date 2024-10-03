@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import LazyLoad from "react-lazyload";
 import './layout.scss'; // Import the updated stylesheet
 
-import PrimeStoneCapital_logo from "../../assets/images/PrimeStone-Logo.webp";
+import PrimeStoneCapital_logo from "../../assets/images/PrimeStone-logo.webp";
 
 const Navbar = () => {
     const [isNavOpen, setIsNavOpen] = useState(false);
