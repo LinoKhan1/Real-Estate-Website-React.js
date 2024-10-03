@@ -50,3 +50,6 @@ Thumbs.db
 # Uncomment if you're using ESLint or Prettier
 # .eslintcache
 # .prettiercache
+
+# Local Netlify folder
+.netlify

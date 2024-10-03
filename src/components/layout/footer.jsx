@@ -2,7 +2,7 @@ import React from "react";
 import './layout.scss';
 import LazyLoad from "react-lazyload";
 
-import PrimeStoneCapital_logo from "../../assets/images/PrimeStone-Logo.webp";
+import PrimeStoneCapital_logo from "../../assets/images/PrimeStone-logo.webp";
 
 const Footer = () => {
     return (
