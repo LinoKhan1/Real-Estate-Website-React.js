@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import './layout.scss';
 
 import PrimeStoneCapital_logo from "../../assets/images/PrimeStone-logo.webp";
@@ -17,14 +18,26 @@ const Footer = () => {
                     <div className="col-lg-3">
                         <h2>Company</h2>
                         <ul>
-                            <li>About</li>
-                            <li>News</li>
+                            <li>
+                                <Link className="link" to="/about">
+                                    About
+                                </Link>
+                            </li>
+                            <li>
+                                <Link className="link" to="/about">
+                                    News
+                                </Link>
+                            </li>
                         </ul>
                     </div>
                     <div className="col-lg-3">
                         <h2>Get in touch</h2>
                         <ul>
-                            <li>Contact us</li>
+                            <li>
+                                <Link className="link" to="/contact">
+                                    Contact us
+                                </Link>
+                            </li>
                             <li>LinkedIn</li>
                         </ul>
                     </div>

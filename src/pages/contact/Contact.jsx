@@ -1,5 +1,5 @@
 // React
-import React from "react";
+import React, { Suspense } from "react";
 import './Contact.scss';
 
 // Lazy load ContactComponent
@@ -8,16 +8,12 @@ import ContactInfo from './ContactInfo';
 import ContactForm from './ContactForm';
 
 const Contact = () => {
-
-
-    
     return (
         <div className="contact-page">
             {/** Hero Section */}
             <div className="hero-section">
                 <h1 className="display-1">Contact Us</h1>
             </div>
-
             {/** Contact Section */}
             <div className="contact-section">
                 <section className="section">
@@ -31,7 +27,10 @@ const Contact = () => {
                     </div>
                 </section>
             </div>
-            <ContactComponent />
+            {/** Suspense for lazy-loaded component */}
+            <Suspense fallback={<div>Loading Contact Info...</div>}>
+                <ContactComponent />
+            </Suspense>
         </div>
     );
 }

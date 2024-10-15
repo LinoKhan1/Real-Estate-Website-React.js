@@ -41,7 +41,7 @@ const articles = [
 
 const NewsSection = () => {
     return (
-        <div className="news-section">
+        <div className="news-section" id="news">
             <section className="section">
                 <div className="title-section">
                     <h1 className="display-2">News & Coverage</h1>

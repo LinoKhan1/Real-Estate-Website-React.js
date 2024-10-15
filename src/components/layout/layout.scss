@@ -145,6 +145,10 @@ $font-size-small: 1rem;
 
         li {
             margin-bottom: 16px;
+            .link{
+                color: #fff;
+                text-decoration: none;
+            }
         }
     }
 

@@ -112,7 +112,7 @@ const Home = () => {
                                 <h2>
                                     Navigating the NYC Real Estate Market
                                 </h2>
-                                <Link className="link" to="/insights">
+                                <Link className="link" to="/about">
                                     Explore Our Latest Market Report <FaArrowRight />
                                 </Link>
                             </div>

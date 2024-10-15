@@ -42,9 +42,14 @@ $margin-right: 20px;
         align-items: center; // Vertical alignment
     }
 
-    .secondary-btn {
+    .link {
         width: 100%;
+        .secondary-btn {
+            width: 100%;
+        }
     }
+
+
 }
 
 // Responsive Styles

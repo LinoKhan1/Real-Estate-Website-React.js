@@ -23,11 +23,12 @@ const ContactComponent = () => {
                             </p>
                         </div>
                         <div className="col">
-                            <button className="secondary-btn">
-                                <Link className="link" to="/contact">
+                            <Link className="link" to="/contact">
+                                <button className="secondary-btn">
                                     Contact Us
-                                </Link>
-                            </button>
+                                </button>
+                            </Link>
+                          
                         </div>
                     </div>
                 </section>
